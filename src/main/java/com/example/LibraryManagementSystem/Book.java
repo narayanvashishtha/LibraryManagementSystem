@@ -1,15 +1,19 @@
 package com.example.LibraryManagementSystem;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name="book_table")
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+
+@Entity(name = "book_table")
 public class Book {
 
     @Id
     private int id;
+
+    @Column(name = "book_name")
     private String name;
     private int pages;
     private String author;
