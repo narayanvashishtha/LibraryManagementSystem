@@ -27,4 +27,8 @@ public class AuthorController {
 
         return authorService.findAuthorByName(name);
     }
+    @DeleteMapping
+    public List<AuthorResponseDto> deleteAuthor(@RequestBody String authorName){
+       return authorService.findAuthorByName(authorName);
+    }
 }
